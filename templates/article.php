@@ -8,13 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-
+<a href="/">На главную</a>
 <article>
-    <?php foreach ($news as $article): ?>
-        <a href="/article.php?id=<?php echo $article->id; ?>"><h2><?php echo $article->title; ?></h2></a>
-    <p><?php echo mb_substr($article->content, 0, 300) . '...'; ?></p>
-    <?php endforeach; ?>
+        <h2><?php echo $article->title; ?></h2>
+        <p><?php echo $article->content; ?></p>
 </article>
-
 </body>
 </html>
