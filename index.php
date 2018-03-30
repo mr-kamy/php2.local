@@ -4,6 +4,6 @@ require __DIR__ . '/autoload.php';
 
 $data = \App\Models\Article::findAll();
 
-$users = \App\Models\User::findAll();
+$user = \App\Models\User::findById(1);
 
-var_dump($users);
+var_dump($user);
