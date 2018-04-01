@@ -19,7 +19,7 @@ abstract class Model
         $db = new Db();
         $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
         $res = $db->query($sql, [':id' => $id], static::class);
-        if (!empty($res)){
+        if (!empty($res)) {
             return $res[0];
         } else {
             return false;
@@ -33,7 +33,7 @@ abstract class Model
         $cols = [];
         $data = [];
 
-        foreach ($fields as $name=> $value){
+        foreach ($fields as $name => $value) {
             if ('id' == $name) {
                 continue;
             }
@@ -41,7 +41,7 @@ abstract class Model
             $data[':' . $name] = $value;
         }
 
-        $sql = 'INSERT INTO '. static::TABLE . ' (' . implode(',', $cols) . ') VALUES (' . implode(',', array_keys($data)) . ')';
+        $sql = 'INSERT INTO ' . static::TABLE . ' (' . implode(',', $cols) . ') VALUES (' . implode(',', array_keys($data)) . ')';
 
         $db = new Db();
         $db->execute($sql, $data);
@@ -55,7 +55,7 @@ abstract class Model
         $cols = [];
         $data = [];
 
-        foreach ($fields as $name => $value){
+        foreach ($fields as $name => $value) {
             $data[':' . $name] = $value;
             if ('id' == $name) {
                 continue;
@@ -63,9 +63,18 @@ abstract class Model
             $cols[] = $name . '=:' . $name;
         }
 
-        $sql = 'UPDATE ' . static::TABLE . ' SET ' .implode(',', $cols) . ' WHERE id=:id';
+        $sql = 'UPDATE ' . static::TABLE . ' SET ' . implode(',', $cols) . ' WHERE id=:id';
 
         $db = new Db();
         $db->execute($sql, $data);
+    }
+
+    public function save()
+    {
+        if (empty($this->id)) {
+            $this->insert();
+        } else {
+            $this->update();
+        }
     }
 }

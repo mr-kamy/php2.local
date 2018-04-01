@@ -12,6 +12,6 @@ $article = new \App\Models\Article();
 
 $article->title = 'Измененный заголовок новости';
 $article->content = 'Измененный текст';
-$article->id = 2;
+$article->id = 5;
 
-$article->update();
+var_dump($article->save());
