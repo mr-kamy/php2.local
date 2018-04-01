@@ -10,8 +10,9 @@ class Db
 
     public function __construct()
     {
-        $config = (include __DIR__ . '/../data/conf.php')['db'];
-        $this->dbh = new \PDO('mysql:host=' . $config['host'] . ';dbname=' . $config['dbname'], $config['user'], $config['password']);
+        $config = new Config();
+        $this->dbh = new \PDO('mysql:host=' . $config->data['db']['host'] . ';dbname=' . $config->data['db']['dbname'],
+            $config->data['db']['user'], $config->data['db']['password']);
     }
 
     public function query($sql, $data = [], $class)
