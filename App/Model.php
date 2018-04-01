@@ -48,4 +48,24 @@ abstract class Model
 
         $this->id = $db->getLastId();
     }
+
+    public function update()
+    {
+        $fields = get_object_vars($this);
+        $cols = [];
+        $data = [];
+
+        foreach ($fields as $name => $value){
+            $data[':' . $name] = $value;
+            if ('id' == $name) {
+                continue;
+            }
+            $cols[] = $name . '=:' . $name;
+        }
+
+        $sql = 'UPDATE ' . static::TABLE . ' SET ' .implode(',', $cols) . ' WHERE id=:id';
+
+        $db = new Db();
+        $db->execute($sql, $data);
+    }
 }

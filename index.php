@@ -10,9 +10,8 @@ include __DIR__ . '/templates/index.php';
 
 $article = new \App\Models\Article();
 
-$article->title = 'Заголовок новости';
-$article->content = 'Опять что-то произошло';
+$article->title = 'Измененный заголовок новости';
+$article->content = 'Измененный текст';
+$article->id = 2;
 
-$article->insert();
-
-var_dump($article);
+$article->update();
