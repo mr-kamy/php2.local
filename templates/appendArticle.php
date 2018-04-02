@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
+<a href="/">На главную</a>
+<a href="/App/Controllers/admin.php">Админка</a>
 <form action="/App/Controllers/appendArticle.php" method="post">
     <input type="text" name="title">
     <br>

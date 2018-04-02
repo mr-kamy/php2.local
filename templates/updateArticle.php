@@ -20,6 +20,8 @@ if ((isset($_GET['id'])) && ($_GET['id'] != '')) {
     <title>Document</title>
 </head>
 <body>
+<a href="/">На главную</a>
+<a href="/App/Controllers/admin.php">Админка</a>
 <form action="/App/Controllers/updateArticle.php?id=<?php echo $article->id; ?>" method="post">
     <input type="text" name="title" value="<?php echo $article->title; ?>">
     <br>

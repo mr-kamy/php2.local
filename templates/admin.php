@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+<a href="/">На главную</a>
 <article>
     <?php foreach ($news as $article): ?>
         <a href="/App/Controllers/article.php?id=<?php echo $article->id; ?>"><h2><?php echo $article->title; ?></h2></a>
