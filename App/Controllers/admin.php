@@ -2,6 +2,10 @@
 
 require __DIR__ . '/../../autoload.php';
 
-$news = \App\Models\Article::findLast(3);
+$view = new \App\View();
 
-include __DIR__ . '/../../templates/admin.php';
+$view->news = \App\Models\Article::findLast(3);
+
+$template = __DIR__ . '/../../templates/admin.php';
+
+$view->display($template);

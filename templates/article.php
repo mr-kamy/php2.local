@@ -10,8 +10,8 @@
 <body>
 <a href="/">На главную</a>
 <article>
-        <h2><?php echo $article->title; ?></h2>
-        <p><?php echo $article->content; ?></p>
+        <h2><?php echo $this->article->title; ?></h2>
+        <p><?php echo $this->article->content; ?></p>
 </article>
 </body>
 </html>
