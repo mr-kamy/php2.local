@@ -4,22 +4,7 @@ namespace App;
 
 class View implements \Countable
 {
-    protected $data = [];
-
-    public function __set($name, $value)
-    {
-        $this->data[$name] = $value;
-    }
-
-    public function __get($name)
-    {
-        return $this->data[$name] ?? null;
-    }
-
-    function __isset($name)
-    {
-        return isset($this->data[$name]);
-    }
+    use Magic;
 
     public function render($template)
     {
@@ -35,15 +20,6 @@ class View implements \Countable
         echo $this->render($template);
     }
 
-    /**
-     * Count elements of an object
-     * @link http://php.net/manual/en/countable.count.php
-     * @return int The custom count as an integer.
-     * </p>
-     * <p>
-     * The return value is cast to an integer.
-     * @since 5.1.0
-     */
     public function count()
     {
         return count($this->data);
