@@ -2,7 +2,7 @@
 
 namespace App;
 
-class View implements \Countable
+class View implements \Countable, \Iterator
 {
     use Magic;
 
@@ -23,5 +23,35 @@ class View implements \Countable
     public function count()
     {
         return count($this->data);
+    }
+
+
+    public function current()
+    {
+        return current($this->data);
+    }
+
+
+    public function next()
+    {
+        next($this->data);
+    }
+
+
+    public function key()
+    {
+        return null !== key($this->data);
+    }
+
+
+    public function valid()
+    {
+        return key($this->data);
+    }
+
+
+    public function rewind()
+    {
+        reset($this->data);
     }
 }

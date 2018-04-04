@@ -7,7 +7,8 @@ abstract class Model
 {
     public $id;
 
-    /**получение всех записей таблицы
+    /**
+     * получение всех записей таблицы
      * @return array
      */
     public static function findAll()
@@ -17,7 +18,8 @@ abstract class Model
         return $db->query($sql, [], static::class);
     }
 
-    /**получение записи по id
+    /**
+     * получение записи по id
      * @param int $id
      * @return object
      */

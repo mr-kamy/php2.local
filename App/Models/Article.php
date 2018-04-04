@@ -15,7 +15,8 @@ class Article extends Model
     public $content;
     public $author_id;
 
-    /**Получение последних qt новостей
+    /**
+     * Получение последних qt новостей
      * @param int $qt
      * @return array
      */
@@ -26,7 +27,8 @@ class Article extends Model
         return $db->query($sql, [], static::class);
     }
 
-    /**Получение автора, при его наличии
+    /**
+     * Получение автора, при его наличии
      * @param string $name
      * @return object
      */
