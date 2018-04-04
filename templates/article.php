@@ -12,6 +12,7 @@
 <article>
         <h2><?php echo $this->article->title; ?></h2>
         <p><?php echo $this->article->content; ?></p>
+        <p><cite><?php echo $this->article->author; ?></cite></p>
 </article>
 </body>
 </html>

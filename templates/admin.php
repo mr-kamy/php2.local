@@ -13,6 +13,7 @@
     <?php foreach ($this->news as $article): ?>
         <a href="/App/Controllers/article.php?id=<?php echo $article->id; ?>"><h2><?php echo $article->title; ?></h2></a>
         <p><?php echo mb_substr($article->content, 0, 300) . '...'; ?></p>
+        <p><cite><?php echo $article->author; ?></cite></p>
     <a href="/templates/updateArticle.php?id=<?php echo $article->id; ?>">Редактировать запись</a>
     <a href="/App/Controllers/deleteArticle.php?id=<?php echo $article->id; ?>">Удалить запись</a>
     <?php endforeach; ?>

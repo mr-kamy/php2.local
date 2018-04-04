@@ -7,6 +7,9 @@ abstract class Model
 {
     public $id;
 
+    /**получение всех записей таблицы
+     * @return array
+     */
     public static function findAll()
     {
         $db = new Db();
@@ -14,7 +17,11 @@ abstract class Model
         return $db->query($sql, [], static::class);
     }
 
-    public static function findById($id)
+    /**получение записи по id
+     * @param int $id
+     * @return object
+     */
+    public static function findById(int $id)
     {
         $db = new Db();
         $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
@@ -25,6 +32,7 @@ abstract class Model
             return false;
         }
     }
+
 
     public function insert()
     {
