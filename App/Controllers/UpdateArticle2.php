@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\admin;
+namespace App\Controllers;
 
 
 use App\Controller;
@@ -17,7 +17,7 @@ class UpdateArticle extends Controller
             $article->content = $_POST['content'];
             $article->save();
         }
-        header('Location: /admin.php');
+        header('Location: /?ctrl=Admin');
         exit;
     }
 }

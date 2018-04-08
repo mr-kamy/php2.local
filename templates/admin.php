@@ -12,11 +12,11 @@
 <article>
 
     <?php foreach ($this->news as $article): ?>
-        <a href="/article.php?id=<?php echo $article->id; ?>"><h2><?php echo $article->title; ?></h2></a>
+        <a href="/?ctrl=Article&id=<?php echo $article->id; ?>"><h2><?php echo $article->title; ?></h2></a>
         <p><?php echo mb_substr($article->content, 0, 300) . '...'; ?></p>
         <p><cite><?php echo $article->author; ?></cite></p>
     <a href="/templates/updateArticle.php?id=<?php echo $article->id; ?>">Редактировать запись</a>
-    <a href="/deleteArticle.php?id=<?php echo $article->id; ?>">Удалить запись</a>
+    <a href="/?ctrl=DeleteArticle&id=<?php echo $article->id; ?>">Удалить запись</a>
     <?php endforeach; ?>
     <a href="/templates/appendArticle.php">Добавить запись</a>
 </article>

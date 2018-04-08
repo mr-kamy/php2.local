@@ -1,6 +1,9 @@
 <?php
 
-require __DIR__ . '/autoload.php';
+require __DIR__ . '/App/autoload.php';
 
-$ctrl = new App\Controllers\Index();
+$ctrl = $_GET['ctrl'] ?? 'Index';
+$class = '\App\Controllers\\' . $ctrl;
+
+$ctrl = new $class;
 $ctrl();

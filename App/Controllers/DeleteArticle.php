@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\admin;
+namespace App\Controllers;
 
 
 use App\Controller;
@@ -16,7 +16,7 @@ class DeleteArticle extends Controller
             $article->delete();
         }
 
-        header('Location: /admin.php');
+        header('Location: /?ctrl=Admin');
         exit;
     }
 
