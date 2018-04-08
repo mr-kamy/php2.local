@@ -22,7 +22,7 @@ if ((isset($_GET['id'])) && ($_GET['id'] != '')) {
 <body>
 <a href="/">На главную</a>
 <a href="/App/Controllers/admin.php">Админка</a>
-<form action="/App/Controllers/updateArticle.php?id=<?php echo $article->id; ?>" method="post">
+<form action="/updateArticle.php?id=<?php echo $article->id; ?>" method="post">
     <input type="text" name="title" value="<?php echo $article->title; ?>">
     <br>
     <textarea rows="5" cols="50" name="content"><?php echo $article->content; ?></textarea>

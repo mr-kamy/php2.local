@@ -10,7 +10,7 @@
 <body>
 <a href="/">На главную</a>
 <a href="/App/Controllers/admin.php">Админка</a>
-<form action="/App/Controllers/appendArticle.php" method="post">
+<form action="/appendArticle.php" method="post">
     <input type="text" name="title">
     <br>
     <textarea rows="5" cols="50" name="content"></textarea>
