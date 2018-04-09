@@ -2,6 +2,6 @@
 
 require __DIR__ . '/../../autoload.php';
 
-$news = \App\Models\Article::findLast(3);
+$news = \App\Models\Article::findAll();
 
 include __DIR__ . '/../../templates/admin.php';
