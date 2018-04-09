@@ -17,7 +17,7 @@ class UpdateArticle extends Controller
             $article->content = $_POST['content'];
             $article->save();
         }
-        header('Location: /?ctrl=Admin');
+        header('Location: /Admin');
         exit;
     }
 }

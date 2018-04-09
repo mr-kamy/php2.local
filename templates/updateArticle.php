@@ -1,15 +1,3 @@
-<?php
-
-require __DIR__ . '/../App/autoload.php';
-
-if ((isset($_GET['id'])) && ($_GET['id'] != '')) {
-    $article = \App\Models\Article::findById($_GET['id']);
-} else {
-    header('Location: /App/Controllers/?ctrl=Admin');
-    exit;
-}
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,11 +9,11 @@ if ((isset($_GET['id'])) && ($_GET['id'] != '')) {
 </head>
 <body>
 <a href="/">На главную</a>
-<a href="/?ctrl=Admin">Админка</a>
-<form action="/?ctrl=UpdateArticle&id=<?php echo $article->id; ?>" method="post">
-    <input type="text" name="title" value="<?php echo $article->title; ?>">
+<a href="/Admin">Админка</a>
+<form action="/UpdateArticle/?id=<?php echo $this->article->id; ?>" method="post">
+    <input type="text" name="title" value="<?php echo $this->article->title; ?>">
     <br>
-    <textarea rows="5" cols="50" name="content"><?php echo $article->content; ?></textarea>
+    <textarea rows="5" cols="50" name="content"><?php echo $this->article->content; ?></textarea>
     <br>
     <button type="submit">Отправить</button>
 </form>

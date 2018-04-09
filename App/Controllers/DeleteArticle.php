@@ -11,12 +11,11 @@ class DeleteArticle extends Controller
     protected function handle()
     {
         if ((isset($_GET['id'])) && ($_GET['id'] != '')) {
-            $article = new Article();
-            $article->id = $_GET['id'];
+            $article = Article::findById($_GET['id']);
             $article->delete();
         }
 
-        header('Location: /?ctrl=Admin');
+        header('Location: /Admin');
         exit;
     }
 

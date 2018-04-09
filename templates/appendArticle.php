@@ -9,8 +9,8 @@
 </head>
 <body>
 <a href="/">На главную</a>
-<a href="/?ctrl=Admin">Админка</a>
-<form action="/?ctrl=AppendArticle" method="post">
+<a href="/Admin">Админка</a>
+<form action="/AppendArticle" method="post">
     <input type="text" name="title">
     <br>
     <textarea rows="5" cols="50" name="content"></textarea>
