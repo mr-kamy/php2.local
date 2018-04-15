@@ -3,6 +3,8 @@
 namespace App;
 
 
+use App\Exceptions\Exception404;
+
 abstract class Model
 {
     public $id;
@@ -22,6 +24,7 @@ abstract class Model
      * получение записи по id
      * @param int $id
      * @return object
+     * @throws Exception404
      */
     public static function findById(int $id)
     {
@@ -31,7 +34,7 @@ abstract class Model
         if (!empty($res)) {
             return $res[0];
         } else {
-            return false;
+            throw new Exception404('Файл не найден', 404);
         }
     }
 
