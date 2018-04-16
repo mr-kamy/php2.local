@@ -11,12 +11,13 @@ class AppendArticle extends Controller
 
     protected function handle()
     {
-        if ((!empty($_POST['title'])) && (!empty($_POST['content']))) {
+
+        if(!empty($_POST)){
             $article = new Article();
-            $article->title = $_POST['title'];
-            $article->content = $_POST['content'];
+            $article->fill($_POST);
             $article->save();
         }
+
         header('Location: /Admin');
         exit;
     }

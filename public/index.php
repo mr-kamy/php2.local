@@ -19,4 +19,13 @@ try {
 } catch (\App\Exceptions\Exception404 $error) {
     $ctrl = new \App\Controllers\Error404;
     $ctrl();
+} catch (\App\Errors $errors) {
+    $ctrl = new \App\Controllers\Errors;
+    $messages = [];
+    foreach ($errors->all() as $error) {
+        $messages[] = $error->getMessage();
+    }
+    $ctrl->messages = $messages;
+    $ctrl();
+
 }

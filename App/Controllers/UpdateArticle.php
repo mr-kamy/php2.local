@@ -10,12 +10,13 @@ class UpdateArticle extends Controller
 {
     protected function handle()
     {
-        if ((!empty($_POST['title'])) && (!empty($_POST['content'])) && (!empty($_GET['id']))) {
+
+        if(!empty($_POST)){
             $article = Article::findById($_GET['id']);
-            $article->title = $_POST['title'];
-            $article->content = $_POST['content'];
+            $article->fill($_POST);
             $article->save();
         }
+
         header('Location: /Admin');
         exit;
     }
