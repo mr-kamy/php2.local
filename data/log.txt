@@ -1,0 +1,4 @@
+2018-04-17T13:40:09+03:00 - 404 - Файл не найден - C:\OSPanel\domains\php2.local\App\Model.php - 37
+2018-04-17T13:42:13+03:00 - 100 - Ошибка подключения к БД - C:\OSPanel\domains\php2.local\App\Db.php - 24
+2018-04-17T13:43:15+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 53
+2018-04-17T13:43:15+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 56

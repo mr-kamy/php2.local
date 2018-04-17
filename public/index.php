@@ -12,17 +12,26 @@ try {
     $ctrl = new $class;
     $ctrl();
 } catch (\App\Exceptions\DbException $error) {
+    $logger = new \App\Logger();
+    $logger->append($error);
+    $logger->save();
     $ctrl = new \App\Controllers\Error;
     $ctrl->message = $error->getMessage();
     $ctrl->code = $error->getCode();
     $ctrl();
 } catch (\App\Exceptions\Exception404 $error) {
+    $logger = new \App\Logger();
+    $logger->append($error);
+    $logger->save();
     $ctrl = new \App\Controllers\Error404;
     $ctrl();
 } catch (\App\Errors $errors) {
     $ctrl = new \App\Controllers\Errors;
     $messages = [];
     foreach ($errors->all() as $error) {
+        $logger = new \App\Logger();
+        $logger->append($error);
+        $logger->save();
         $messages[] = $error->getMessage();
     }
     $ctrl->messages = $messages;
