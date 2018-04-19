@@ -6,5 +6,9 @@ return [
         'dbname' => 'php2',
         'user' => 'root',
         'password' => '',
+    ],
+    'mail' => [
+        'username' => '',
+        'password' => '',
     ]
 ];
