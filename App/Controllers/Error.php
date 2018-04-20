@@ -20,7 +20,7 @@ class Error extends Controller
 
 
             $message = (new \Swift_Message($this->message))
-                ->setFrom(['test@test.com' => 'Алексей Калугин'])
+                ->setFrom(['mr.kamc@gmail.com' => 'Алексей Калугин'])
                 ->setTo(['mr.kamc@gmail.com'])
                 ->setBody($this->message . ' код - ' . $this->code . ' время: ' . date('c'))
             ;
