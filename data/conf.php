@@ -3,12 +3,15 @@
 return [
     'db' => [
         'host' => 'localhost',
-        'dbname' => 'php2',
+        'dbname' => 'php',
         'user' => 'root',
         'password' => '',
     ],
     'mail' => [
-        'username' => '',
-        'password' => '',
+        'host' => 'smtp.googlemail.com',
+        'port' => '465',
+        'security' => 'ssl',
+        'username' => 'mr.kamc@gmail.com',
+        'password' => '******',
     ]
 ];
