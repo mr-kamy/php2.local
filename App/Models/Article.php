@@ -15,17 +15,6 @@ class Article extends Model
     public $content;
     public $author_id;
 
-    /**
-     * Получение последних qt новостей
-     * @param int $qt
-     * @return array
-     */
-    public function findLast(int $qt)
-    {
-        $db = new Db();
-        $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY id DESC LIMIT ' . $qt;
-        return $db->query($sql, [], static::class);
-    }
 
     /**
      * Получение автора, при его наличии
