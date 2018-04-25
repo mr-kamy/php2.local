@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 
+use App\Config;
 use App\Controller;
 
 class Error extends Controller
@@ -11,9 +12,11 @@ class Error extends Controller
     protected function handle()
     {
         if (100 == $this->code) {
-            $transport = (new \Swift_SmtpTransport('smtp.googlemail.com', 465, 'ssl'))
-                ->setUsername('mr.kamc@gmail.com')
-                ->setPassword('131318aa');
+            $config = Config::getInstance();
+            $transport = (new \Swift_SmtpTransport
+            ($config->data['mail']['host'], $config->data['mail']['port'], $config->data['mail']['security']))
+                ->setUsername($config->data['mail']['username'])
+                ->setPassword($config->data['mail']['password']);
 
             $mailer = new \Swift_Mailer($transport);
 
