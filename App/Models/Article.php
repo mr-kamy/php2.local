@@ -30,5 +30,11 @@ class Article extends Model
         }
     }
 
+    function __isset($name)
+    {
+        if ('author' == $name) {
+            return isset($this->author_id);
+        }
+    }
 
 }
