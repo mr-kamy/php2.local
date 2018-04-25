@@ -17,18 +17,6 @@ class Article extends Model
     public $author_id;
 
     /**
-     * Получение последних qt новостей
-     * @param int $qt
-     * @return array
-     */
-    public function findLast(int $qt)
-    {
-        $db = new Db();
-        $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY id DESC LIMIT ' . $qt;
-        return $db->query($sql, [], static::class);
-    }
-
-    /**
      * Получение автора, при его наличии
      * @param string $name
      * @return object
@@ -40,6 +28,13 @@ class Article extends Model
             if (!empty($this->author_id)) {
                 return Author::findById($this->author_id);
             }
+        }
+    }
+
+    function __isset($name)
+    {
+        if ('author' == $name) {
+            return isset($this->author_id);
         }
     }
 

@@ -10,9 +10,11 @@
 <body>
 <a href="/">На главную</a>
 <article>
-        <h2><?php echo $this->article->title; ?></h2>
-        <p><?php echo $this->article->content; ?></p>
-        <p><cite><?php echo $this->article->author->name; ?></cite></p>
+    <h2><?php echo $this->article->title; ?></h2>
+    <p><?php echo $this->article->content; ?></p>
+    <?php if (isset($article->author)): ?>
+        <p><cite><?php echo $article->author->name; ?></cite></p>
+    <?php endif; ?>
 </article>
 </body>
 </html>
