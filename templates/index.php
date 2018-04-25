@@ -16,7 +16,9 @@
         <a href="/Article/?id=<?php echo $article->id; ?>"><h2><?php echo $article->title; ?></h2>
         </a>
         <p><?php echo mb_substr($article->content, 0, 300) . '...'; ?></p>
-        <p><cite><?php echo $article->author->name; ?></cite></p>
+        <?php if (isset($article->author)): ?>
+            <p><cite><?php echo $article->author->name; ?></cite></p>
+        <?php endif; ?>
     </article>
 <?php endforeach; ?>
 

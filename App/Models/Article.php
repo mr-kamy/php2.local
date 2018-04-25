@@ -17,18 +17,6 @@ class Article extends Model
     public $author_id;
 
     /**
-     * Получение последних qt новостей
-     * @param int $qt
-     * @return array
-     */
-    public function findLast(int $qt)
-    {
-        $db = new Db();
-        $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY id DESC LIMIT ' . $qt;
-        return $db->query($sql, [], static::class);
-    }
-
-    /**
      * Получение автора, при его наличии
      * @param string $name
      * @return object
@@ -43,20 +31,27 @@ class Article extends Model
         }
     }
 
+    function __isset($name)
+    {
+        if ('author' == $name) {
+            return isset($this->author_id);
+        }
+    }
+
     public function fill(array $data = [])
     {
         $this->title = $data['title'];
         $this->content = $data['content'];
 
         $errors = new Errors();
-        if (empty($this->title)){
+        if (empty($this->title)) {
             $errors->add(new \Exception('Заголовок пустой'));
         }
-        if (empty($this->content)){
+        if (empty($this->content)) {
             $errors->add(new \Exception('Отсутствует текст новости'));
         }
 
-        if (!$errors->empty()){
+        if (!$errors->empty()) {
             throw $errors;
         }
 

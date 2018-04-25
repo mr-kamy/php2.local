@@ -2,3 +2,5 @@
 2018-04-17T13:42:13+03:00 - 100 - Ошибка подключения к БД - C:\OSPanel\domains\php2.local\App\Db.php - 24
 2018-04-17T13:43:15+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 53
 2018-04-17T13:43:15+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 56
+2018-04-25T23:05:16+03:00 - 0 - Заголовок пустой - F:\OSPanel\domains\php2.local\App\Models\Article.php - 48
+2018-04-25T23:05:16+03:00 - 0 - Отсутствует текст новости - F:\OSPanel\domains\php2.local\App\Models\Article.php - 51
