@@ -25,7 +25,7 @@ try {
     $logger->save();
     $ctrl = new \App\Controllers\Error404;
     $ctrl();
-} catch (\App\Errors $errors) {
+} catch (Kamc\MultiException\MultiException $errors) {
     $ctrl = new \App\Controllers\Errors;
     $messages = [];
     foreach ($errors->all() as $error) {

@@ -6,6 +6,7 @@ namespace App\Models;
 use App\Db;
 use App\Errors;
 use App\Model;
+use Kamc\MultiException\MultiException;
 
 class Article extends Model
 {
@@ -48,7 +49,7 @@ class Article extends Model
         $this->title = $data['title'];
         $this->content = $data['content'];
 
-        $errors = new Errors();
+        $errors = new MultiException();
         if (empty($this->title)){
             $errors->add(new \Exception('Заголовок пустой'));
         }

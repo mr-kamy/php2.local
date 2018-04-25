@@ -13,7 +13,7 @@ class Error extends Controller
         if (100 == $this->code) {
             $transport = (new \Swift_SmtpTransport('smtp.googlemail.com', 465, 'ssl'))
                 ->setUsername('mr.kamc@gmail.com')
-                ->setPassword('******');
+                ->setPassword('131318aa');
 
             $mailer = new \Swift_Mailer($transport);
 
