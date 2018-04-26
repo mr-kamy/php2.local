@@ -4,3 +4,17 @@
 2018-04-17T13:43:15+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 56
 2018-04-25T23:05:16+03:00 - 0 - Заголовок пустой - F:\OSPanel\domains\php2.local\App\Models\Article.php - 48
 2018-04-25T23:05:16+03:00 - 0 - Отсутствует текст новости - F:\OSPanel\domains\php2.local\App\Models\Article.php - 51
+2018-04-26T09:13:39+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 45
+2018-04-26T09:13:39+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 48
+2018-04-26T09:29:16+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T09:31:10+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T09:31:40+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T09:31:40+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T09:31:46+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T09:32:20+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T09:33:21+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T09:33:27+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T09:33:35+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T09:33:41+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 45
+2018-04-26T09:33:41+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 48
+2018-04-26T09:33:48+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 45

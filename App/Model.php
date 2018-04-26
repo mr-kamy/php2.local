@@ -2,9 +2,6 @@
 
 namespace App;
 
-
-use App\Exceptions\Exception404;
-
 abstract class Model
 {
     public $id;
@@ -31,11 +28,11 @@ abstract class Model
         $db = new Db();
         $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
         $res = $db->query($sql, [':id' => $id], static::class);
-        if (!empty($res)) {
-            return $res[0];
-        } else {
-            throw new Exception404('Файл не найден', 404);
-        }
+            if($res){
+                return $res[0];
+            } else {
+                return false;
+            }
     }
 
     /**

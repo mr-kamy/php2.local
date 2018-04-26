@@ -40,19 +40,19 @@ class Article extends Model
 
     public function fill(array $data = [])
     {
-        $this->title = $data['title'];
-        $this->content = $data['content'];
-
         $errors = new Errors();
-        if (empty($this->title)) {
+        if (empty($data['title'])) {
             $errors->add(new \Exception('Заголовок пустой'));
         }
-        if (empty($this->content)) {
+        if (empty($data['content'])) {
             $errors->add(new \Exception('Отсутствует текст новости'));
         }
 
         if (!$errors->empty()) {
             throw $errors;
+        } else {
+            $this->title = $data['title'];
+            $this->content = $data['content'];
         }
 
     }
