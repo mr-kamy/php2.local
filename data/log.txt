@@ -18,3 +18,5 @@
 2018-04-26T09:33:41+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 45
 2018-04-26T09:33:41+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 48
 2018-04-26T09:33:48+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 45
+2018-04-26T10:28:36+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\FormArticle.php - 21
+2018-04-26T10:28:44+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\FormArticle.php - 21
