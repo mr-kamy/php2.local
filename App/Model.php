@@ -21,7 +21,6 @@ abstract class Model
      * получение записи по id
      * @param int $id
      * @return object
-     * @throws Exception404
      */
     public static function findById(int $id)
     {
