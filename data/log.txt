@@ -48,3 +48,10 @@
 2018-04-25T20:23:49+03:00 - 0 - Заголовок пустой - F:\OSPanel\domains\php2.local\App\Models\Article.php - 53
 2018-04-25T20:23:49+03:00 - 0 - Отсутствует текст новости - F:\OSPanel\domains\php2.local\App\Models\Article.php - 56
 2018-04-25T20:25:46+03:00 - 100 - Ошибка подключения к БД - F:\OSPanel\domains\php2.local\App\Db.php - 24
+2018-04-26T09:46:49+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T09:56:00+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 45
+2018-04-26T09:56:00+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 48
+2018-04-26T10:01:30+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 45
+2018-04-26T10:01:30+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 48
+2018-04-26T10:02:12+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 45
+2018-04-26T10:02:12+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 48
