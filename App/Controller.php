@@ -19,7 +19,7 @@ abstract class Controller
 
     public function __invoke()
     {
-        if ($this->access()){
+        if ($this->access()) {
             $this->handle();
         } else {
             die ('Нет доступа');

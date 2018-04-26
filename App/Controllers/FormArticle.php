@@ -13,7 +13,7 @@ class FormArticle extends Controller
     {
         if ((isset($_GET['id'])) && ($_GET['id'] != '')) {
             $id = $_GET['id'];
-            if(\App\Models\Article::findById($id)){
+            if (\App\Models\Article::findById($id)) {
                 $this->view->article = \App\Models\Article::findById($id);
                 echo $this->view->render(__DIR__ . '/../../templates/updateArticle.php');
             } else {

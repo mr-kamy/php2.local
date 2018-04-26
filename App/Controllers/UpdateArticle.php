@@ -11,7 +11,7 @@ class UpdateArticle extends Controller
     protected function handle()
     {
 
-        if(!empty($_POST)){
+        if (!empty($_POST)) {
             $article = Article::findById($_GET['id']);
             $article->fill($_POST);
             $article->save();

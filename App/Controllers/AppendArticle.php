@@ -12,7 +12,7 @@ class AppendArticle extends Controller
     protected function handle()
     {
 
-        if(!empty($_POST)){
+        if (!empty($_POST)) {
             $article = new Article();
             $article->fill($_POST);
             $article->save();

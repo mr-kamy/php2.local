@@ -37,7 +37,7 @@ class Db
     {
         $sth = $this->dbh->prepare($sql);
         $res = $sth->execute($data);
-        if (!$res){
+        if (!$res) {
             throw new DbException('Запрос не может быть выполнен', 101);
         }
         return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
