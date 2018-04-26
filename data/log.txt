@@ -55,3 +55,8 @@
 2018-04-26T10:01:30+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 48
 2018-04-26T10:02:12+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 45
 2018-04-26T10:02:12+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 48
+2018-04-26T10:30:49+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\FormArticle.php - 20
+2018-04-26T10:30:55+03:00 - 404 - Новость не найдена - C:\OSPanel\domains\php2.local\App\Controllers\Article.php - 19
+2018-04-26T10:31:09+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 48
+2018-04-26T10:31:17+03:00 - 0 - Заголовок пустой - C:\OSPanel\domains\php2.local\App\Models\Article.php - 45
+2018-04-26T10:31:17+03:00 - 0 - Отсутствует текст новости - C:\OSPanel\domains\php2.local\App\Models\Article.php - 48
