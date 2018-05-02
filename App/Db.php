@@ -4,6 +4,7 @@ namespace App;
 
 
 use App\Exceptions\DbException;
+use App\Models\Article;
 
 class Db
 {
@@ -53,6 +54,22 @@ class Db
     {
         return $this->dbh->lastInsertId();
     }
+
+    public function queryEach($sql, $data = [], $class)
+    {
+        $sth = $this->dbh->prepare($sql);
+        $res = $sth->execute($data);
+        if (!$res) {
+            throw new DbException('Запрос не может быть выполнен', 101);
+        }
+
+        $sth->setFetchMode(\PDO::FETCH_CLASS, $class);
+        while ($rec = $sth->fetch()){
+            yield $rec;
+        }
+
+    }
+
 
 
 }

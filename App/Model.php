@@ -14,7 +14,7 @@ abstract class Model
     {
         $db = new Db();
         $sql = 'SELECT * FROM ' . static::TABLE;
-        return $db->query($sql, [], static::class);
+        return $db->queryEach($sql, [], static::class);
     }
 
     /**
@@ -44,7 +44,7 @@ abstract class Model
     {
         $db = new Db();
         $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY id DESC LIMIT ' . $qt;
-        return $db->query($sql, [], static::class);
+        return $db->queryEach($sql, [], static::class);
     }
 
     public function insert()
