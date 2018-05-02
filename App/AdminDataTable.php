@@ -18,11 +18,9 @@ class AdminDataTable
     {
         $arr = [];
         foreach ($this->models as $val) {
-            var_dump($val);
 
             foreach ($this->functions as $func){
-                var_dump($func);
-                //$arr[$val] = $func;
+                var_dump($func($val));
 
         }
     }
