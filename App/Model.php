@@ -14,7 +14,7 @@ abstract class Model
     {
         $db = new Db();
         $sql = 'SELECT * FROM ' . static::TABLE;
-        return $db->queryEach($sql, [], static::class);
+        return $db->query($sql, [], static::class);
     }
 
     /**
