@@ -16,15 +16,11 @@ class AdminDataTable
 
     public function render()
     {
-        $arr = [];
-        foreach ($this->models as $val) {
-
-            foreach ($this->functions as $func){
-                var_dump($func($val));
-
-        }
+        $template = __DIR__ . '/../templates/admin.php';
+        $view = new View();
+        $view->models = $this->models;
+        $view->functions = $this->functions;
+        echo $view->render($template);
     }
-    //return $arr;
-}
 
 }

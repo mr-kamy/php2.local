@@ -2,14 +2,20 @@
 
 namespace App\Controllers;
 
+use App\AdminDataTable;
 use App\Controller;
 
 class Admin extends Controller
 {
     protected function handle()
     {
-        $this->view->news = \App\Models\Article::findAll();
-        echo $this->view->render(__DIR__ . '/../../templates/admin.php');
+
+        $articles = \App\Models\Article::findAll();
+
+        $functions = include __DIR__ . '/../functions.php';
+        $table = new AdminDataTable($articles, $functions);
+        $table->render();
+
     }
 
 }

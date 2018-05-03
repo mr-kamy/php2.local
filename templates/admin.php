@@ -8,19 +8,19 @@
     <title>Document</title>
 </head>
 <body>
+<h1>AdminTable</h1>
 <a href="/">На главную</a>
-<article>
-
-    <?php foreach ($this->news as $article): ?>
-        <a href="/Article/?id=<?php echo $article->id; ?>"><h2><?php echo $article->title; ?></h2></a>
-        <p><?php echo mb_substr($article->content, 0, 300) . '...'; ?></p>
-        <?php if (isset($article->author)): ?>
-            <p><cite><?php echo $article->author->name; ?></cite></p>
-        <?php endif; ?>
-        <a href="/FormArticle/?id=<?php echo $article->id; ?>">Редактировать запись</a>
-        <a href="/DeleteArticle/?id=<?php echo $article->id; ?>">Удалить запись</a>
+<table border="1">
+    <?php foreach ($this->data['models'] as $article): ?>
+        <tr>
+            <?php foreach ($this->data['functions'] as $function): ?>
+                <td><?php echo($function($article)); ?></td>
+            <?php endforeach; ?>
+            <td><a href="/FormArticle/?id=<?php echo $article->id; ?>">Редактировать запись</a></td>
+            <td><a href="/DeleteArticle/?id=<?php echo $article->id; ?>">Удалить запись</a></td>
+        </tr>
     <?php endforeach; ?>
-    <a href="/FormArticle">Добавить запись</a>
-</article>
+</table>
+<a href="/FormArticle">Добавить запись</a>
 </body>
 </html>

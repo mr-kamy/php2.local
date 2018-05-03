@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../App/autoload.php';
 
-
+/*
 $articles = \App\Models\Article::findAll();
 
 $functions = [
@@ -26,7 +26,7 @@ $functions = [
 
 $table = new \App\AdminDataTable($articles, $functions);
 $table->render();
-/*
+*/
 
 $uri = $_SERVER['REQUEST_URI'];
 $parts = explode('/', $uri);
@@ -64,4 +64,3 @@ try {
     $ctrl();
 
 }
-*/
